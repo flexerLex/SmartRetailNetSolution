@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0DFD+6OEsuxqtmpcvi9UGPqJYZ2pZzRPLWTr1yWnnJk8mOKYJ/ju0vdI+BowsUDFyWB14nnw3ezjS56XfsYOyg==",
+  "dgSpecHash": "AerIOgCxPW1DzuLKU/Im2BavH0A6ZkClG+0jGCI1OkXmNWIyLzDt3REgw7SCXF72yn7gaZp+uCISC728r1hOJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\ServerLibrary.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\olepyl\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\olepyl\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\olepyl\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\olepyl\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
