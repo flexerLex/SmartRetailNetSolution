@@ -9,6 +9,6 @@ namespace BaseLibrary.Entities
 
         //Relationshiop: One To Many
         [JsonIgnore]
-        public List<IoT_Device>? ioT_Devices { get; set; }
+        public List<IoTDevice>? ioTDDevices { get; set; }
     }
 }

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace BaseLibrary.Entities
 {
-    internal class Store_Area
+    
+//- entrance area
+//- checkout area
+//- main customer flow area
+    public class StoreArea: BaseEntity
     {
+        public string? RequiredTemperature { get; set; }
+
     }
 }
