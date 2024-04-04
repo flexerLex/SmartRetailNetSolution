@@ -12,7 +12,7 @@ namespace BaseLibrary.Entities
 //- main customer flow area
     public class StoreArea: BaseEntity
     {
-        public string? RequiredTemperature { get; set; }
+    //    public string? RequiredTemperature { get; set; }
 
     }
 }

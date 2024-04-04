@@ -19,12 +19,7 @@ namespace BaseLibrary.Entities
         public StoreArea? StoreArea { get; set; }
         public int StoreAreaId { get; set; }
 
-        //public Store? Store { get; set; }
-        //public int StoreId { get; set; }
-
         public Employee4RetailStore? Employees { get; set; }
         public int EmployeesId { get; set; }
-
-
     }
 }
