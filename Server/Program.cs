@@ -1,6 +1,9 @@
 using BaseLibrary.Entities;
 using Microsoft.EntityFrameworkCore;
 using ServerLibrary.Data;
+using ServerLibrary.Helpers;
+using ServerLibrary.Repositories.Contracts;
+using ServerLibrary.Repositories.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.Configure<JwtSection>(builder.Configuration.GetSection("JwtSection"));
+
 // starting
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -18,6 +23,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     throw new InvalidOperationException("Sry, connection is not found"));
 });
 
+builder.Services.AddScoped<IUserAccount, UserAccountRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -3,60 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Migrations\\20240404111506_InitialCreate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ServerLibrary\\Migrations\\20240404111506_InitialCreate1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Migrations\\20240404123612_JWTAuth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ServerLibrary\\Migrations\\20240404123612_JWTAuth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\entities\\storearea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\entities\\storearea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\serverlibrary\\repositories\\implementations\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|solutionrelative:serverlibrary\\repositories\\implementations\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\entities\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\entities\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\entities\\employee4retailstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\entities\\employee4retailstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\entities\\iotdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\entities\\iotdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\dtos\\accountbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\dtos\\accountbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\serverlibrary\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|solutionrelative:serverlibrary\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\serverlibrary\\serverlibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|solutionrelative:serverlibrary\\serverlibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\dtos\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\dtos\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\serverlibrary\\helpers\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|solutionrelative:serverlibrary\\helpers\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|solutionrelative:server\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\dtos\\accountbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\dtos\\accountbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\dtos\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\dtos\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\serverlibrary\\serverlibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|solutionrelative:serverlibrary\\serverlibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\dtos\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\dtos\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CDA19BA2-6BDF-45C2-BC8E-586375C96DE6}|Server\\Server.csproj|solutionrelative:server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\serverlibrary\\helpers\\jwtsection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|solutionrelative:serverlibrary\\helpers\\jwtsection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\serverlibrary\\repositories\\contracts\\iuseraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A5087D3-9BD7-4C78-A831-04A0B2DAA789}|ServerLibrary\\ServerLibrary.csproj|solutionrelative:serverlibrary\\repositories\\contracts\\iuseraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\responses\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\responses\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|c:\\users\\olepyl\\source\\repos\\smartretailnetsolution\\baselibrary\\responses\\generalresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{569575C7-12EB-4515-B122-C648B604511E}|BaseLibrary\\BaseLibrary.csproj|solutionrelative:baselibrary\\responses\\generalresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,188 +78,228 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20240404111506_InitialCreate1.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Migrations\\20240404111506_InitialCreate1.cs",
-              "RelativeDocumentMoniker": "ServerLibrary\\Migrations\\20240404111506_InitialCreate1.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Migrations\\20240404111506_InitialCreate1.cs",
-              "RelativeToolTip": "ServerLibrary\\Migrations\\20240404111506_InitialCreate1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T11:15:06.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Program.cs",
-              "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T14:15:00.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\appsettings.json",
-              "RelativeDocumentMoniker": "Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\appsettings.json*",
-              "RelativeToolTip": "Server\\appsettings.json*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-03T14:10:29.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IoTDevice.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\IoTDevice.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\Entities\\IoTDevice.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\IoTDevice.cs",
-              "RelativeToolTip": "BaseLibrary\\Entities\\IoTDevice.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T13:54:18.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "ServerLibrary\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "ServerLibrary\\Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:47:12.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Register.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Register.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\DTOs\\Register.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Register.cs",
-              "RelativeToolTip": "BaseLibrary\\DTOs\\Register.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:40:52.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Login.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\DTOs\\Login.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Login.cs",
-              "RelativeToolTip": "BaseLibrary\\DTOs\\Login.cs",
+              "Title": "Server",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Server.csproj",
+              "RelativeDocumentMoniker": "Server\\Server.csproj",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Server.csproj",
+              "RelativeToolTip": "Server\\Server.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-04T12:36:32.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20240404123612_JWTAuth.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Migrations\\20240404123612_JWTAuth.cs",
+              "RelativeDocumentMoniker": "ServerLibrary\\Migrations\\20240404123612_JWTAuth.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Migrations\\20240404123612_JWTAuth.cs",
+              "RelativeToolTip": "ServerLibrary\\Migrations\\20240404123612_JWTAuth.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:40:22.843Z",
+              "WhenOpened": "2024-04-04T12:36:12.511Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "AccountBase.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\AccountBase.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\DTOs\\AccountBase.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\AccountBase.cs",
-              "RelativeToolTip": "BaseLibrary\\DTOs\\AccountBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Title": "Register.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Register.cs",
+              "RelativeDocumentMoniker": "BaseLibrary\\DTOs\\Register.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Register.cs",
+              "RelativeToolTip": "BaseLibrary\\DTOs\\Register.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:33:47.861Z",
+              "WhenOpened": "2024-04-04T12:31:05.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Login.cs",
+              "RelativeDocumentMoniker": "BaseLibrary\\DTOs\\Login.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\Login.cs",
+              "RelativeToolTip": "BaseLibrary\\DTOs\\Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:30:56.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\Entities\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\ApplicationUser.cs",
-              "RelativeToolTip": "BaseLibrary\\Entities\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Title": "AccountBase.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\AccountBase.cs",
+              "RelativeDocumentMoniker": "BaseLibrary\\DTOs\\AccountBase.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\DTOs\\AccountBase.cs",
+              "RelativeToolTip": "BaseLibrary\\DTOs\\AccountBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:22:27.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Store.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\Store.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\Entities\\Store.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\Store.cs",
-              "RelativeToolTip": "BaseLibrary\\Entities\\Store.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:10:38.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StoreArea.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\StoreArea.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\Entities\\StoreArea.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\StoreArea.cs",
-              "RelativeToolTip": "BaseLibrary\\Entities\\StoreArea.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T12:10:08.616Z",
+              "WhenOpened": "2024-04-04T12:30:55.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\Entities\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\BaseEntity.cs",
-              "RelativeToolTip": "BaseLibrary\\Entities\\BaseEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Server\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAYwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T09:39:05.378Z",
+              "WhenOpened": "2024-04-04T12:29:17.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Helpers\\Constants.cs",
+              "RelativeDocumentMoniker": "ServerLibrary\\Helpers\\Constants.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Helpers\\Constants.cs",
+              "RelativeToolTip": "ServerLibrary\\Helpers\\Constants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:18:05.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Employee4RetailStore.cs",
-              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\Employee4RetailStore.cs",
-              "RelativeDocumentMoniker": "BaseLibrary\\Entities\\Employee4RetailStore.cs",
-              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\Employee4RetailStore.cs",
-              "RelativeToolTip": "BaseLibrary\\Entities\\Employee4RetailStore.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAArAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Server\\Program.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Program.cs",
+              "RelativeToolTip": "Server\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T09:37:33.181Z",
+              "WhenOpened": "2024-04-04T12:07:43.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ServerLibrary.csproj",
+              "DocumentIndex": 3,
+              "Title": "ServerLibrary",
               "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\ServerLibrary.csproj",
               "RelativeDocumentMoniker": "ServerLibrary\\ServerLibrary.csproj",
               "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\ServerLibrary.csproj",
               "RelativeToolTip": "ServerLibrary\\ServerLibrary.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-03T12:46:20.189Z"
+              "WhenOpened": "2024-04-04T12:06:08.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserAccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Repositories\\Implementations\\UserAccountRepository.cs",
+              "RelativeDocumentMoniker": "ServerLibrary\\Repositories\\Implementations\\UserAccountRepository.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Repositories\\Implementations\\UserAccountRepository.cs",
+              "RelativeToolTip": "ServerLibrary\\Repositories\\Implementations\\UserAccountRepository.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAADgv2gAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:01:05.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "BaseLibrary\\Entities\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "BaseLibrary\\Entities\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:11:10.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "JwtSection.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Helpers\\JwtSection.cs",
+              "RelativeDocumentMoniker": "ServerLibrary\\Helpers\\JwtSection.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Helpers\\JwtSection.cs",
+              "RelativeToolTip": "ServerLibrary\\Helpers\\JwtSection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T12:06:47.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Server\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Server\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-04T12:05:01.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\Server\\appsettings.json",
+              "RelativeToolTip": "Server\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-04T12:02:12.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Responses\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "BaseLibrary\\Responses\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Responses\\LoginResponse.cs",
+              "RelativeToolTip": "BaseLibrary\\Responses\\LoginResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T11:59:40.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GeneralResponse.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Responses\\GeneralResponse.cs",
+              "RelativeDocumentMoniker": "BaseLibrary\\Responses\\GeneralResponse.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\BaseLibrary\\Responses\\GeneralResponse.cs",
+              "RelativeToolTip": "BaseLibrary\\Responses\\GeneralResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T11:59:12.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IUserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Repositories\\Contracts\\IUserAccount.cs",
+              "RelativeDocumentMoniker": "ServerLibrary\\Repositories\\Contracts\\IUserAccount.cs",
+              "ToolTip": "C:\\Users\\olepyl\\source\\repos\\SmartRetailNetSolution\\ServerLibrary\\Repositories\\Contracts\\IUserAccount.cs",
+              "RelativeToolTip": "ServerLibrary\\Repositories\\Contracts\\IUserAccount.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T11:55:51.488Z",
+              "EditorCaption": ""
             }
           ]
         }

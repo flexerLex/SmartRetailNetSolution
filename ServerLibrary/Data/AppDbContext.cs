@@ -1,5 +1,6 @@
 ﻿
 using BaseLibrary.Entities;
+using BaseLibrary.Entitys;
 using Microsoft.EntityFrameworkCore;
 
 namespace ServerLibrary.Data
@@ -13,5 +14,7 @@ namespace ServerLibrary.Data
         public DbSet<Store> Stores { get; set; }
         public DbSet<StoreArea> StoreAreas { get; set; }
 
+        public DbSet<SystemRole> SystemRoles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
     }
 }
