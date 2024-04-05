@@ -16,6 +16,93 @@
 
 SmartRetailNet utilizes MQTT for real-time communication between the server and various IoT devices scattered throughout the retail environment.
 
+#### output from the console application "" which simulates the operation of 3 iot devices:
+1)EntranceGate
+2)Checkout
+3)ExitGate
+
+on the example of 5 customers in a store:
+
+```
+Simulation-Work-IOT-Device-Store is started
+IoT Device Simulator for EntranceGate is started...
+IoT Device Checkout is started...
+IoT Device Simulator for ExitGate is started...
+Store Monitoring Service is running...
+Customer1 trying to enter the store
+EntranceGate is open
+Customer2 trying to enter the store
+EntranceGate is open
+Customer3 trying to enter the store
+EntranceGate is open
+Customer4 trying to enter the store
+EntranceGate is open
+Customer5 trying to enter the store
+EntranceGate is open
+Customer4 walks around the store, selects a product(0.5 - 5 sec)
+Customer5 walks around the store, selects a product(0.5 - 5 sec)
+Customer1 walks around the store, selects a product(0.5 - 5 sec)
+Customer2 walks around the store, selects a product(0.5 - 5 sec)
+Customer3 walks around the store, selects a product(0.5 - 5 sec)
+Customer3 approaches the payment area
+PayIfFrei:Processing a new customer3...{
+        PayIfFrei: self-service cash desk is free, the user can enter
+            PayIfFrei:The customer3 pays for the items. Wait a couple seconds
+Customer5 approaches the payment area
+PayIfFrei:Processing a new customer5...{
+    Customer5 waits for the Checkout to become available...
+    Customer5 waits for the Checkout to become available...
+Customer2 approaches the payment area
+PayIfFrei:Processing a new customer2...{
+    Customer2 waits for the Checkout to become available...
+    Customer3 has paid for the items! The Checkout is available
+PayIfFrei:Processing customer3 is End
+}
+Customer3 has left the store
+Customer4 approaches the payment area
+PayIfFrei:Processing a new customer4...{
+        PayIfFrei: self-service cash desk is free, the user can enter
+            PayIfFrei:The customer4 pays for the items. Wait a couple seconds
+    Customer5 waits for the Checkout to become available...
+Customer1 approaches the payment area
+PayIfFrei:Processing a new customer1...{
+    Customer1 waits for the Checkout to become available...
+    Customer2 waits for the Checkout to become available...
+    Customer5 waits for the Checkout to become available...
+    Customer2 waits for the Checkout to become available...
+    Customer1 waits for the Checkout to become available...
+    Customer4 has paid for the items! The Checkout is available
+PayIfFrei:Processing customer4 is End
+}
+Customer4 has left the store
+        PayIfFrei: self-service cash desk is free, the user can enter
+            PayIfFrei:The customer5 pays for the items. Wait a couple seconds
+    Customer1 waits for the Checkout to become available...
+    Customer2 waits for the Checkout to become available...
+    Customer2 waits for the Checkout to become available...
+    Customer1 waits for the Checkout to become available...
+    Customer5 has paid for the items! The Checkout is available
+PayIfFrei:Processing customer5 is End
+}
+Customer5 has left the store
+        PayIfFrei: self-service cash desk is free, the user can enter
+        PayIfFrei: self-service cash desk is free, the user can enter
+            PayIfFrei:The customer1 pays for the items. Wait a couple seconds
+            PayIfFrei:The customer2 pays for the items. Wait a couple seconds
+    Customer2 has paid for the items! The Checkout is available
+PayIfFrei:Processing customer2 is End
+}
+Customer2 has left the store
+    Customer1 has paid for the items! The Checkout is available
+PayIfFrei:Processing customer1 is End
+}
+Customer1 has left the store
+```
+
+
+
+
+
 #### MQTT Topics and Message Formats
 
 To facilitate the development and ensure consistency across the solution - formats for each device type:
@@ -89,77 +176,3 @@ To facilitate the development and ensure consistency across the solution - forma
     }
     ```
 
-
-
-
-
-```
-using MQTTnet;
-using MQTTnet.Client;
-using MQTTnet.Client.Options;
-using System;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-class StoreMonitoringService
-{
-    private readonly IMqttClient _mqttClient;
-    private int _customerCount = 0;
-
-    public StoreMonitoringService()
-    {
-        // Инициализация MQTT клиента
-        var mqttFactory = new MqttFactory();
-        _mqttClient = mqttFactory.CreateMqttClient();
-
-        // Обработчик входящих сообщений
-        _mqttClient.UseApplicationMessageReceivedHandler(async e =>
-        {
-            var topic = e.ApplicationMessage.Topic;
-            if (topic == "store/customers/update")
-            {
-                var message = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-                if (message == "increment")
-                {
-                    // Увеличиваем счетчик покупателей
-                    Interlocked.Increment(ref _customerCount);
-                }
-                else if (message == "decrement")
-                {
-                    // Уменьшаем счетчик покупателей
-                    Interlocked.Decrement(ref _customerCount);
-                }
-
-                // Публикуем актуальное количество покупателей в магазине
-                await SendMessageAsync("store/customers/count", _customerCount.ToString());
-            }
-        });
-    }
-
-    public async Task StartAsync()
-    {
-        // Подключение к MQTT брокеру
-        var options = new MqttClientOptionsBuilder()
-            .WithTcpServer("localhost", 1883) // Адрес и порт MQTT брокера
-            .Build();
-
-        await _mqttClient.ConnectAsync(options, CancellationToken.None);
-
-        // Подписываемся на топик обновлений количества покупателей
-        await _mqttClient.SubscribeAsync(new TopicFilterBuilder().WithTopic("store/customers/update").Build());
-
-        Console.WriteLine("Store Monitoring Service is running...");
-    }
-
-    private async Task SendMessageAsync(string topic, string message)
-    {
-        var mqttMessage = new MqttApplicationMessageBuilder()
-            .WithTopic(topic)
-            .WithPayload(Encoding.UTF8.GetBytes(message))
-            .Build();
-
-        await _mqttClient.PublishAsync(mqttMessage);
-    }
-}
-```
