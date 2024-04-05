@@ -94,32 +94,72 @@ To facilitate the development and ensure consistency across the solution - forma
 
 
 ```
-// Внутри компонента мониторинга магазина или сервиса
-public async Task HandleCustomerCountUpdates()
+using MQTTnet;
+using MQTTnet.Client;
+using MQTTnet.Client.Options;
+using System;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+class StoreMonitoringService
 {
-    mqttClient.UseApplicationMessageReceivedHandler(e =>
+    private readonly IMqttClient _mqttClient;
+    private int _customerCount = 0;
+
+    public StoreMonitoringService()
     {
-        var topic = e.ApplicationMessage.Topic;
-        if (topic == "store/customers/update")
+        // Инициализация MQTT клиента
+        var mqttFactory = new MqttFactory();
+        _mqttClient = mqttFactory.CreateMqttClient();
+
+        // Обработчик входящих сообщений
+        _mqttClient.UseApplicationMessageReceivedHandler(async e =>
         {
-            var message = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-            if (message == "increment")
+            var topic = e.ApplicationMessage.Topic;
+            if (topic == "store/customers/update")
             {
-                // Увеличиваем счетчик покупателей
-                Interlocked.Increment(ref _customerCount);
-            }
-            else if (message == "decrement")
-            {
-                // Уменьшаем счетчик покупателей
-                Interlocked.Decrement(ref _customerCount);
-            }
+                var message = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
+                if (message == "increment")
+                {
+                    // Увеличиваем счетчик покупателей
+                    Interlocked.Increment(ref _customerCount);
+                }
+                else if (message == "decrement")
+                {
+                    // Уменьшаем счетчик покупателей
+                    Interlocked.Decrement(ref _customerCount);
+                }
 
-            // Публикуем актуальное количество покупателей в магазине
-            SendMessageAsync("store/customers/count", _customerCount.ToString()).Wait();
-        }
-    });
+                // Публикуем актуальное количество покупателей в магазине
+                await SendMessageAsync("store/customers/count", _customerCount.ToString());
+            }
+        });
+    }
 
-    // Подписываемся на топик обновлений
-    await mqttClient.SubscribeAsync(new TopicFilterBuilder().WithTopic("store/customers/update").Build());
+    public async Task StartAsync()
+    {
+        // Подключение к MQTT брокеру
+        var options = new MqttClientOptionsBuilder()
+            .WithTcpServer("localhost", 1883) // Адрес и порт MQTT брокера
+            .Build();
+
+        await _mqttClient.ConnectAsync(options, CancellationToken.None);
+
+        // Подписываемся на топик обновлений количества покупателей
+        await _mqttClient.SubscribeAsync(new TopicFilterBuilder().WithTopic("store/customers/update").Build());
+
+        Console.WriteLine("Store Monitoring Service is running...");
+    }
+
+    private async Task SendMessageAsync(string topic, string message)
+    {
+        var mqttMessage = new MqttApplicationMessageBuilder()
+            .WithTopic(topic)
+            .WithPayload(Encoding.UTF8.GetBytes(message))
+            .Build();
+
+        await _mqttClient.PublishAsync(mqttMessage);
+    }
 }
 ```
