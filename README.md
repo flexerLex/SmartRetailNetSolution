@@ -92,89 +92,8 @@ To facilitate the development and ensure consistency across the solution - forma
 
 
 
-Для реализации функционала, который отслеживает актуальное количество покупателей внутри магазина с использованием EntranceGate и ExitGate, и обновляет количество на основании входящих и исходящих покупателей, можно использовать MQTT брокер для подписки на соответствующие топики и отправку обновлений в эти топики. В этом примере мы будем использовать отдельный топик, например, store/customers/count, для отслеживания количества покупателей в магазине.Шаг 1: Расширение базового класса IoTDeviceДля начала убедимся, что базовый класс IoTDevice поддерживает как публикацию, так и подписку на сообщения:abstract class IoTDevice
-{
-    protected IMqttClient mqttClient;
 
-    public IoTDevice(IMqttClient client)
-    {
-        mqttClient = client;
-    }
-
-    protected async Task SendMessageAsync(string topic, string message)
-    {
-        var mqttMessage = new MqttApplicationMessageBuilder()
-            .WithTopic(topic)
-            .WithPayload(Encoding.UTF8.GetBytes(message))
-            .Build();
-
-        await mqttClient.PublishAsync(mqttMessage);
-    }
-
-    protected void Subscribe(string topic)
-    {
-        mqttClient.SubscribeAsync(new TopicFilterBuilder().WithTopic(topic).Build());
-    }
-}
-Шаг 2: Реализация функционала в EntranceGate и ExitGateТеперь добавим в классы EntranceGate и ExitGate функционал для подписки на топик store/customers/count и обновления количества покупателей в магазине.class EntranceGate : IoTDevice
-{
-    public EntranceGate(IMqttClient client) : base(client)
-    {
-        Subscribe("store/customers/count");
-        mqttClient.UseApplicationMessageReceivedHandler(e =>
-        {
-            if (e.ApplicationMessage.Topic == "store/customers/count")
-            {
-                var currentCount = int.Parse(Encoding.UTF8.GetString(e.ApplicationMessage.Payload));
-                Console.WriteLine($"Актуальное количество покупателей в магазине: {currentCount}");
-            }
-        });
-    }
-
-    public async Task Enter(Customer customer)
-    {
-        await SendMessageAsync("store/entrance", $"Покупатель {customer.Id} вошел в магазин.");
-        // Тут может быть логика для увеличения счетчика покупателей
-    }
-}
-
-class ExitGate : IoTDevice
-{
-    public ExitGate(IMqttClient client) : base(client)
-    {
-        Subscribe("store/customers/count");
-        mqttClient.UseApplicationMessageReceivedHandler(e =>
-        {
-            if (e.ApplicationMessage.Topic == "store/customers/count")
-            {
-                var currentCount = int.Parse(Encoding.UTF8.GetString(e.ApplicationMessage.Payload));
-                Console.WriteLine($"Актуальное количество покупателей в магазине: {currentCount}");
-            }
-        });
-    }
-
-    public async Task Exit(Customer customer)
-    {
-        await SendMessageAsync("store/exit", $"Покупатель {customer.Id} покинул магазин.");
-        // Тут может быть логика для уменьшения счетчика покупателей
-    }
-}
-Шаг 3: Управление количеством покупателейДля управления количеством покупателей внутри магазина необходим компонент (например, сервис или другой класс), который будет отвечать за подсчёт и публикацию актуального числа покупателей в топик store/customers/count. Этот компонент будет подписан на топики store/entrance и store/exit, чтобы увеличивать или уменьшать счётчик в зависимости от действий покупателей.class CustomerCounter
-{
-    private int _customerCount = 0;
-    private readonly IMqttClient _mqttClient;
-
-    public CustomerCounter(IMqttClient mqttClient)
-    {
-        _mqttClient = mqttClient;
-
-        // Подписываемся на вход и
-
-
-
-
-
-
+```
 // Внутри компонента мониторинга магазина или сервиса
 public async Task HandleCustomerCountUpdates()
 {
@@ -203,3 +122,4 @@ public async Task HandleCustomerCountUpdates()
     // Подписываемся на топик обновлений
     await mqttClient.SubscribeAsync(new TopicFilterBuilder().WithTopic("store/customers/update").Build());
 }
+```
