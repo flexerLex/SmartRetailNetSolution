@@ -96,10 +96,28 @@ namespace ServerLibrary.Repositories.Implementations
             await appDbContext.SaveChangesAsync();
             return (T)result.Entity;
         }
-
-        public Task<LoginResponse> SignInAsync(Login user)
+        public async Task<LoginResponse> SignInAsync(Login user)
         {
-            throw new NotImplementedException();
+            if (user is null) return new LoginResponse(false, "Model is Empty!");
+
+            var applicationUser = await FindUserByEmail(user.Email!);
+            if (applicationUser is null) return new LoginResponse(false, "User not Found");
+
+            //verif password
+            if (!BCrypt.Net.BCrypt.Verify(user.Password, applicationUser.Password))
+                return new LoginResponse(false, "Email/Password not valid");
+
+            var getUserRole = await FindUserRole(applicationUser.Id); // appDbContext.UserRoles.FirstOrDefaultAsync(_ => _.UserId == applicationUser.Id);
+            if (getUserRole is null) return new LoginResponse(false, "user role  not found");
+
+            var getRoleName = await FindRoleName(getUserRole.RoleId);//await appDbContext.SystemRoles.FirstOrDefaultAsync(_ => _.Id == getUserRole.RoleId);
+            if (getRoleName is null) return new LoginResponse(false, "getRoleName is null");
+
+            string jwtToken = GenerateToken(applicationUser, getRoleName!.Name);
+            string refreshToken = GenerateRefreshToken();
+
+            return new LoginResponse(true, "Login successfully", jwtToken, refreshToken);
+
         }
     }
 }
