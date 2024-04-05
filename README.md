@@ -171,3 +171,35 @@ class ExitGate : IoTDevice
         // Подписываемся на вход и
 
 
+
+
+
+
+// Внутри компонента мониторинга магазина или сервиса
+public async Task HandleCustomerCountUpdates()
+{
+    mqttClient.UseApplicationMessageReceivedHandler(e =>
+    {
+        var topic = e.ApplicationMessage.Topic;
+        if (topic == "store/customers/update")
+        {
+            var message = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
+            if (message == "increment")
+            {
+                // Увеличиваем счетчик покупателей
+                Interlocked.Increment(ref _customerCount);
+            }
+            else if (message == "decrement")
+            {
+                // Уменьшаем счетчик покупателей
+                Interlocked.Decrement(ref _customerCount);
+            }
+
+            // Публикуем актуальное количество покупателей в магазине
+            SendMessageAsync("store/customers/count", _customerCount.ToString()).Wait();
+        }
+    });
+
+    // Подписываемся на топик обновлений
+    await mqttClient.SubscribeAsync(new TopicFilterBuilder().WithTopic("store/customers/update").Build());
+}
