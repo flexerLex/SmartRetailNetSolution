@@ -91,35 +91,83 @@ To facilitate the development and ensure consistency across the solution - forma
 
 
 
-Чтобы реализовать логику ожидания клиента у кассы, пока она не освободится, мы можем использовать концепции асинхронного программирования вместе с некоторой логикой состояния для объекта кассы (Checkout). Предположим, у нас есть переменная состояния isCheckoutAvailable в классе Checkout, которая указывает, занята касса или нет. Мы можем использовать эту переменную для контроля доступа к кассе и реализации ожидания в случае, если касса занята.Давайте расширим наш класс Checkout:class Checkout : IoTDevice
+
+Для реализации функционала, который отслеживает актуальное количество покупателей внутри магазина с использованием EntranceGate и ExitGate, и обновляет количество на основании входящих и исходящих покупателей, можно использовать MQTT брокер для подписки на соответствующие топики и отправку обновлений в эти топики. В этом примере мы будем использовать отдельный топик, например, store/customers/count, для отслеживания количества покупателей в магазине.Шаг 1: Расширение базового класса IoTDeviceДля начала убедимся, что базовый класс IoTDevice поддерживает как публикацию, так и подписку на сообщения:abstract class IoTDevice
 {
-    private volatile bool isCheckoutAvailable = true;
+    protected IMqttClient mqttClient;
 
-    public Checkout(IMqttClient client) : base(client) { }
-
-    public async Task Pay(Customer customer)
+    public IoTDevice(IMqttClient client)
     {
-        // Ожидание, пока касса не освободится
-        while (!isCheckoutAvailable)
-        {
-            Console.WriteLine($"Покупатель {customer.Id} ожидает освобождения кассы...");
-            await Task.Delay(1000); // Проверяем доступность каждую секунду
-        }
+        mqttClient = client;
+    }
 
-        // Касса теперь занята
-        isCheckoutAvailable = false;
-        Console.WriteLine($"Покупатель {customer.Id} начинает процесс оплаты.");
+    protected async Task SendMessageAsync(string topic, string message)
+    {
+        var mqttMessage = new MqttApplicationMessageBuilder()
+            .WithTopic(topic)
+            .WithPayload(Encoding.UTF8.GetBytes(message))
+            .Build();
 
-        // Имитация процесса оплаты
-        await Task.Delay(5000); // Допустим, процесс занимает 5 секунд
+        await mqttClient.PublishAsync(mqttMessage);
+    }
 
-        // Оплата завершена, касса снова доступна
-        isCheckoutAvailable = true;
-        Console.WriteLine($"Покупатель {customer.Id} завершил оплату и освободил кассу.");
-
-        // Отправляем сообщение о завершении оплаты
-        await SendMessageAsync("store/checkout/status", $"Покупатель {customer.Id} оплачивает товары и покидает кассу.");
+    protected void Subscribe(string topic)
+    {
+        mqttClient.SubscribeAsync(new TopicFilterBuilder().WithTopic(topic).Build());
     }
 }
-В этом примере, когда метод Pay вызывается, сначала проверяется, доступна ли касса. Если касса занята, метод ожидает (благодаря await Task.Delay(1000);), проверяя состояние isCheckoutAvailable каждую секунду, пока касса не освободится. Как только касса становится доступной, покупатель начинает процесс оплаты, и переменная isCheckoutAvailable устанавливается в false до завершения процесса.Этот подход позволяет эффективно управлять доступом к кассе и обеспечивает правильное взаимодействие покупателей с кассой самообслуживания, даже если требуется ожидание.Для реализации системы, где могут быть очереди и более сложные взаимодействия, возможно, потребуется ввести дополнительные механизмы управления состоянием и очередностью доступа, например, используя очереди сообщений или событийную модель для координации действий между различными компонентами системы.
+Шаг 2: Реализация функционала в EntranceGate и ExitGateТеперь добавим в классы EntranceGate и ExitGate функционал для подписки на топик store/customers/count и обновления количества покупателей в магазине.class EntranceGate : IoTDevice
+{
+    public EntranceGate(IMqttClient client) : base(client)
+    {
+        Subscribe("store/customers/count");
+        mqttClient.UseApplicationMessageReceivedHandler(e =>
+        {
+            if (e.ApplicationMessage.Topic == "store/customers/count")
+            {
+                var currentCount = int.Parse(Encoding.UTF8.GetString(e.ApplicationMessage.Payload));
+                Console.WriteLine($"Актуальное количество покупателей в магазине: {currentCount}");
+            }
+        });
+    }
+
+    public async Task Enter(Customer customer)
+    {
+        await SendMessageAsync("store/entrance", $"Покупатель {customer.Id} вошел в магазин.");
+        // Тут может быть логика для увеличения счетчика покупателей
+    }
+}
+
+class ExitGate : IoTDevice
+{
+    public ExitGate(IMqttClient client) : base(client)
+    {
+        Subscribe("store/customers/count");
+        mqttClient.UseApplicationMessageReceivedHandler(e =>
+        {
+            if (e.ApplicationMessage.Topic == "store/customers/count")
+            {
+                var currentCount = int.Parse(Encoding.UTF8.GetString(e.ApplicationMessage.Payload));
+                Console.WriteLine($"Актуальное количество покупателей в магазине: {currentCount}");
+            }
+        });
+    }
+
+    public async Task Exit(Customer customer)
+    {
+        await SendMessageAsync("store/exit", $"Покупатель {customer.Id} покинул магазин.");
+        // Тут может быть логика для уменьшения счетчика покупателей
+    }
+}
+Шаг 3: Управление количеством покупателейДля управления количеством покупателей внутри магазина необходим компонент (например, сервис или другой класс), который будет отвечать за подсчёт и публикацию актуального числа покупателей в топик store/customers/count. Этот компонент будет подписан на топики store/entrance и store/exit, чтобы увеличивать или уменьшать счётчик в зависимости от действий покупателей.class CustomerCounter
+{
+    private int _customerCount = 0;
+    private readonly IMqttClient _mqttClient;
+
+    public CustomerCounter(IMqttClient mqttClient)
+    {
+        _mqttClient = mqttClient;
+
+        // Подписываемся на вход и
+
 
