@@ -3,23 +3,8 @@ using MQTTnet.Client;
 using MQTTnet.Exceptions;
 using MQTTnet.Server;
 using Newtonsoft.Json;
-using System.Data.Common;
 using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
-
-//Topics structur:
-//var message = $"{{\"customerId\": \"{customerId}\", \"action\": \"{customerAction}\", \"timestamp\": \"{DateTime.Now}\"}}";
-
-//("store/entrance", $"Покупатель {customer.Id} вошел в магазин.")
-//
-//
-//
-//
-//("store/checkout", $"Покупатель {customer.Id} оплачивает товары.");
-//("store/entrance", $"Покупатель {customer.Id} вошел в магазин.")
-//
-//
 
     public class Program
 {
@@ -34,7 +19,6 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
         await mqttClient.ConnectAsync(options);
 
-        // Инициализация устройств
         EntranceGate entrance = new EntranceGate(mqttClient);
         Checkout checkout = new Checkout(mqttClient);
         ExitGate exit = new ExitGate(mqttClient);
@@ -45,28 +29,62 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
         var customers = new List<Customer>
         {
-        new Customer(1),
-        new Customer(2),
-        new Customer(3),
-        new Customer(4),
-        new Customer(5)
+        //new Customer(1),
+        //new Customer(2),
+        //new Customer(3),
+        //new Customer(4),
+        //new Customer(5)
         //new Customer(6),
         //new Customer(7),
         //new Customer(8)
         };
 
+        
+        for (int i = 0; i < 30; i++)
+        {
+            Customer newCustomer = new Customer(i);
+            customers.Add(newCustomer);
+        }
         var tasks = customers.Select(customer => customer.StartShoppingJourney(entrance, checkout, exit));
 
-        await Task.WhenAll(tasks);
 
+
+        await Task.WhenAll(tasks);
     }
 }
 
+class Scanner : IoTDevice
+{
+    public Scanner(IMqttClient client) : base(client)
+    {
+        Console.WriteLine("IoT Device Scanner is started...");
+    }
+
+    //possible data flow:
+    
+//1. **QR Code Content**: The primary piece of data is the information encoded within the QR code itself.This could be:
+//   - A unique identifier (UID) for the customer.
+//   - A token or key that grants access.
+//   - A reference to a customer's pre-purchased ticket or reservation.
+//   - Membership information for loyalty programs.
+
+    //
 
 
+    //
+    //
 
+    public async Task Scan_Qr_Code()
+    {
+        //logik
 
+        await Task.Delay(500);
+        Console.WriteLine($"Scanner scanned the qr code");
+        await SendMessageAsync("store/Scanner", $"Customer entered the store.");
 
+        await SendMessageAsync("store/customers/update", "increment");
+    }
+}
 
 
 class StoreMonitoringService
@@ -98,7 +116,6 @@ class StoreMonitoringService
                     Interlocked.Decrement(ref _customerCount);
                 }
 
-                //await
             }
 
             //await
@@ -133,13 +150,6 @@ class StoreMonitoringService
         await _mqttClient.PublishAsync(mqttMessage);
     }
 }
-
-
-
-
-
-
-
 
 
 class Customer
@@ -205,53 +215,11 @@ abstract class IoTDevice
 
 
 
-
-
-
-    //class ExitGate : IoTDevice
-    //{
-    //    public ExitGate(IMqttClient client) : base(client) 
-    //    { Subscribe("store/customers/count"); 
-    //        mqttClient.UseApplicationMessageReceivedHandler
-    //            (e => 
-    //            { 
-    //                if (e.ApplicationMessage.Topic == "store/customers/count") 
-    //                { 
-    //                    var currentCount = int.Parse(Encoding.UTF8.GetString(e.ApplicationMessage.Payload));
-    //                    Console.WriteLine($"Актуальное количество покупателей в магазине: {currentCount}");
-    //        } 
-    //    }); 
-    //    }
-    //    public async Task Exit(Customer customer)
-    //    {
-    //        await SendMessageAsync("store/exit", $"Покупатель {customer.Id} покинул магазин.");
-    //        // Тут может быть логика для уменьшения счетчика покупателей
-    //    }
-
-    //}
-
-
-
-
-
-
-
-
     class EntranceGate : IoTDevice
 {
     public EntranceGate(IMqttClient client) : base(client)
     {
         Console.WriteLine("IoT Device Simulator for EntranceGate is started...");
-        //    Subscribe("store/customers/count");
-        //mqttClient.ApplicationMessageReceivedAsync += e =>
-        //{
-        //    Console.WriteLine("Received application message.");
-        //    Console.WriteLine($"+ Topic = {e.ApplicationMessage.Topic}");
-        //    Console.WriteLine($"+ Payload = {Encoding.UTF8.GetString(e.ApplicationMessage.Payload)}");
-        //    Console.WriteLine($"+ QoS = {e.ApplicationMessage.QualityOfServiceLevel}");
-        //    Console.WriteLine($"+ Retain = {e.ApplicationMessage.Retain}");
-        //    return Task.CompletedTask;
-        //};
         }
 
     public async Task Enter(Customer customer)
