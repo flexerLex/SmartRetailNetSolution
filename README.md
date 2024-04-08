@@ -12,11 +12,8 @@
     
 3. **MQTT Broker**: An external component, such as Mosquitto, to exchange messages between IoT devices and the server side.
 
-### IoT Device Integration and Messaging
 
-SmartRetailNet utilizes MQTT for real-time communication between the server and various IoT devices scattered throughout the retail environment.
-
-#### output from the console application "" which simulates the operation of 3 iot devices:
+#### output from the console application "Simulation-Work-IOT-Device-Store" which simulates the operation of 3 iot devices:
 1)EntranceGate
 2)Checkout
 3)ExitGate
